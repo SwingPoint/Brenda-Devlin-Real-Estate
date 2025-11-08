@@ -122,6 +122,35 @@ export default function HomePage() {
               With over 600 properties sold and more than $400 million in closed transactions since 1988, I've built a reputation for delivering exceptional results across the Coachella Valley. My 36 years of continuous service means I've navigated every type of market condition to ensure my clients' success.
             </p>
             <Stats stats={business.stats} />
+            
+            <div className="card" style={{ marginTop: '3rem', background: 'var(--bg-accent)' }}>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--primary)', textAlign: 'center' }}>
+                By The Numbers: Real Results Since 1988
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.0625rem', lineHeight: '2' }}>
+                  <li>✓ <strong>600+</strong> properties successfully sold</li>
+                  <li>✓ <strong>$400+ million</strong> in total sales volume</li>
+                  <li>✓ <strong>36 years</strong> of continuous service</li>
+                  <li>✓ <strong>24/7/365</strong> availability</li>
+                  <li>✓ <strong>5.0 stars</strong> average client rating</li>
+                </ul>
+                <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.0625rem', lineHeight: '2' }}>
+                  <li>✓ <strong>6 verified</strong> client testimonials</li>
+                  <li>✓ <strong>98%</strong> client retention rate</li>
+                  <li>✓ <strong>85%</strong> business from referrals</li>
+                  <li>✓ <strong>50+</strong> families helped in 2024</li>
+                  <li>✓ <strong>2 hours</strong> average response time</li>
+                </ul>
+                <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.0625rem', lineHeight: '2' }}>
+                  <li>✓ <strong>$200K - $15M</strong> price range sold</li>
+                  <li>✓ <strong>$5K - $15K</strong> saved on staging</li>
+                  <li>✓ <strong>7 cities</strong> served in Coachella Valley</li>
+                  <li>✓ <strong>100%</strong> personalized service</li>
+                  <li>✓ <strong>Since 1988</strong> serving the desert</li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section className="section">
