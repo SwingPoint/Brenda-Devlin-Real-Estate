@@ -39,6 +39,62 @@
       "Virtual Staging",
       "AI-Powered Marketing",
       "Content Marketing"
+    ],
+    "stats": [
+      {
+        "number": "600+",
+        "label": "Properties Sold"
+      },
+      {
+        "number": "$400M+",
+        "label": "In Closed Sales"
+      },
+      {
+        "number": "36",
+        "label": "Years Experience"
+      },
+      {
+        "number": "24/7",
+        "label": "Availability"
+      }
+    ],
+    "testimonials": [
+      {
+        "text": "Brenda went above and beyond to help us find our dream home in Palm Desert. Her knowledge of the area and attention to detail made the entire process smooth and stress-free. We couldn't be happier!",
+        "author": "Michael & Sarah T.",
+        "title": "Luxury Home Buyers",
+        "rating": 5
+      },
+      {
+        "text": "Working with Brenda was an absolute pleasure. She sold our home in record time and got us well above asking price. Her marketing expertise and use of virtual staging really made our property stand out.",
+        "author": "Robert Johnson",
+        "title": "Home Seller, La Quinta",
+        "rating": 5
+      },
+      {
+        "text": "Brenda's dedication to her clients is unmatched. She was available whenever we needed her, answered all our questions, and guided us through every step. We found the perfect vacation home thanks to her!",
+        "author": "Jennifer & David L.",
+        "title": "Second Home Buyers",
+        "rating": 5
+      },
+      {
+        "text": "As first-time homebuyers, we were nervous about the process. Brenda made everything easy to understand and fought for us every step of the way. Her local knowledge of the Coachella Valley was invaluable!",
+        "author": "Amanda Rodriguez",
+        "title": "First-Time Buyer, Palm Springs",
+        "rating": 5
+      },
+      {
+        "text": "Brenda's professionalism and integrity shine through in everything she does. She helped us navigate a complex sale and made sure we got the best deal possible. Highly recommend!",
+        "author": "Thomas & Maria K.",
+        "title": "Investment Property Sellers",
+        "rating": 5
+      },
+      {
+        "text": "From our first meeting to closing day, Brenda was exceptional. Her use of modern technology and AI-powered marketing tools helped sell our home faster than we expected. She's truly ahead of the curve!",
+        "author": "Patricia Williams",
+        "title": "Home Seller, Indian Wells",
+        "rating": 5
+      }
     ]
   }
 ]

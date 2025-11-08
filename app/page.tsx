@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
+import { Stats } from '@/components/Stats';
+import { Testimonials } from '@/components/Testimonials';
 import businessesData from '@/data/businesses.json';
 import type { Metadata } from 'next';
 
@@ -97,6 +99,11 @@ export default function HomePage() {
 
       <main className="container">
         <section className="section">
+          <h2 className="section-title">Proven Track Record of Excellence</h2>
+          <Stats stats={business.stats} />
+        </section>
+
+        <section className="section">
           <h2 className="section-title">Why Choose Brenda Devlin?</h2>
           <div className="card">
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
@@ -116,6 +123,16 @@ export default function HomePage() {
                 {service}
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">What My Clients Say</h2>
+          <Testimonials testimonials={business.testimonials} limit={3} />
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link href={`/business/${business.slug}`} className="btn">
+              See All Testimonials →
+            </Link>
           </div>
         </section>
 

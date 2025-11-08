@@ -1,14 +1,19 @@
 :root {
-  --primary: #1e40af;
-  --primary-dark: #1e3a8a;
-  --secondary: #f59e0b;
-  --text: #1f2937;
-  --text-light: #6b7280;
-  --bg: #ffffff;
-  --bg-accent: #f9fafb;
-  --border: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  /* Coachella Valley Desert Color Palette */
+  --primary: #C8A882;        /* Warm desert gold */
+  --primary-dark: #A68968;   /* Deep desert gold */
+  --secondary: #D97941;      /* Sunset orange */
+  --accent: #EC4899;         /* Desert flower pink */
+  --text: #2c3e50;           /* Deep charcoal */
+  --text-light: #64748b;     /* Soft gray */
+  --bg: #FDFBF7;            /* Warm white */
+  --bg-accent: #F5F0E8;     /* Desert sand */
+  --bg-card: #FFFFFF;       /* Pure white cards */
+  --border: #E8DFD4;        /* Soft desert border */
+  --shadow: 0 4px 6px -1px rgb(200 168 130 / 0.1), 0 2px 4px -2px rgb(200 168 130 / 0.06);
+  --shadow-lg: 0 10px 25px -3px rgb(200 168 130 / 0.15), 0 4px 6px -4px rgb(200 168 130 / 0.1);
+  --gradient-desert: linear-gradient(135deg, #C8A882 0%, #D97941 100%);
+  --gradient-sunset: linear-gradient(135deg, #D97941 0%, #EC4899 100%);
 }
 
 * {
@@ -31,11 +36,30 @@ body {
 }
 
 .header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--gradient-desert);
   color: white;
   padding: 3rem 1.5rem;
   text-align: center;
   box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/hero-desert.jpg') center/cover;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .header h1 {
@@ -52,10 +76,29 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--gradient-desert);
   color: white;
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/hero-desert.jpg') center/cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-section h1 {
@@ -110,10 +153,10 @@ body {
 }
 
 .card {
-  background: var(--bg);
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 2.5rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
@@ -121,7 +164,7 @@ body {
 
 .card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .nap-block {
@@ -275,6 +318,113 @@ body {
   border-width: 0;
 }
 
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--bg-accent);
+}
+
+.testimonial-author-name {
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 1.0625rem;
+}
+
+.testimonial-author-title {
+  font-size: 0.9375rem;
+  color: var(--text-light);
+}
+
+.testimonial-rating {
+  color: var(--secondary);
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Stats Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--bg-accent);
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-card);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-section h1 {
@@ -295,5 +445,13 @@ body {
   
   .services-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

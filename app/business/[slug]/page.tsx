@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
 import { NapBlock } from '@/components/NapBlock';
+import { Stats } from '@/components/Stats';
+import { Testimonials } from '@/components/Testimonials';
 import businessesData from '@/data/businesses.json';
 import type { Metadata } from 'next';
 
@@ -167,6 +169,11 @@ export default async function BusinessPage({ params }: PageProps) {
         </nav>
 
         <section className="section">
+          <h2 className="section-title">Proven Excellence</h2>
+          <Stats stats={business.stats} />
+        </section>
+
+        <section className="section">
           <h2 className="section-title">About {business.name}</h2>
           <div className="card">
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '1rem' }}>
@@ -256,6 +263,11 @@ export default async function BusinessPage({ params }: PageProps) {
               View Full FAQ Page →
             </Link>
           </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Client Testimonials</h2>
+          <Testimonials testimonials={business.testimonials} />
         </section>
 
         <section className="section">
