@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "brenda-devlin-real-estate",
+    "name": "Brenda Devlin Real Estate",
+    "type": "RealEstateAgent",
+    "description": "Leading with heart, experience and integrity – blending deep real estate expertise with genuine care for people. I treat every transaction like it's personal and every relationship like it's family.",
+    "tagline": "My attention to detail and my ability to make every interaction personal with the needs of the buyer or seller.",
+    "address": {
+      "streetAddress": "76300 Country Club Drive",
+      "addressLocality": "Palm Desert",
+      "addressRegion": "CA",
+      "postalCode": "92211",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "latitude": "33.7637",
+      "longitude": "-116.3778"
+    },
+    "phone": "760-408-8588",
+    "email": "BDevlinRealtor@gmail.com",
+    "website": "https://brendadevlin.com",
+    "mapLink": "https://maps.app.goo.gl/w7vkFwCcMiwB7aYJ9",
+    "areaServed": "Coachella Valley",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "openingHoursDisplay": "7 days a week, 24 hours a day",
+    "sameAs": [
+      "https://facebook.com/brendadevlinrealestate",
+      "https://instagram.com/brendadevlinrealtor",
+      "https://linkedin.com/in/brendasuedevlin",
+      "https://brendadevlin.com"
+    ],
+    "image": "/images/brenda-devlin-hero.jpg",
+    "priceRange": "$$",
+    "brandVoice": "Warm, trustworthy, polished, deeply local",
+    "services": [
+      "Residential Real Estate",
+      "Buyer Representation",
+      "Seller Representation",
+      "Virtual Staging",
+      "AI-Powered Marketing",
+      "Content Marketing"
+    ]
+  }
+]
