@@ -203,6 +203,9 @@ export default function HomePage() {
               <Link href={`/business/${business.slug}`} className="btn">
                 Contact & Location Info
               </Link>
+              <Link href="/blog" className="btn" style={{ background: 'var(--secondary)' }}>
+                Market Insights & Blog
+              </Link>
               <Link href="/faq" className="btn" style={{ background: 'var(--primary)' }}>
                 Frequently Asked Questions
               </Link>

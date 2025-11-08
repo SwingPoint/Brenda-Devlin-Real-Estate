@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import businessesData from '@/data/businesses.json';
+import blogPosts from '@/data/blog-posts.json';
 
 /**
  * Next.js 15.5 dynamic sitemap configuration
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/faq`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -33,5 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...businessPages];
+  // Dynamic blog pages
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.modifiedDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...businessPages, ...blogPages];
 }
