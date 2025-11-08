@@ -148,11 +148,36 @@ export default async function BusinessPage({ params }: PageProps) {
     },
   };
 
+  // Review Schemas for Testimonials
+  const reviewSchemas = business.testimonials.map((testimonial, index) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    '@id': `https://brendadevlin.com/business/${business.slug}#review${index + 1}`,
+    itemReviewed: {
+      '@type': 'RealEstateAgent',
+      name: business.name,
+    },
+    author: {
+      '@type': 'Person',
+      name: testimonial.author,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: testimonial.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    reviewBody: testimonial.text,
+  }));
+
   return (
     <>
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={personSchema} />
       <JsonLd data={serviceSchema} />
+      {reviewSchemas.map((schema, index) => (
+        <JsonLd key={index} data={schema} />
+      ))}
 
       <header className="header">
         <div className="container">

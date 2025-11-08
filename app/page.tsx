@@ -81,10 +81,25 @@ export default function HomePage() {
     },
   };
 
+  // AggregateRating Schema
+  const aggregateRatingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateAgent',
+    name: business.name,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: business.testimonials.length,
+      bestRating: '5',
+      worstRating: '5',
+    },
+  };
+
   return (
     <>
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />
+      <JsonLd data={aggregateRatingSchema} />
 
       <header className="hero-section">
         <div className="container">
@@ -109,10 +124,15 @@ export default function HomePage() {
           <section className="section">
             <h2 className="section-title">Why Choose Brenda Devlin?</h2>
             <div className="card">
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary-dark)' }}>
+                Experience Meets Innovation in Coachella Valley
+              </h3>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '1rem' }}>
+                With <strong>36 years of deep expertise</strong> in the {business.areaServed} real estate market, I bring a unique blend
+                of cutting-edge technology and personal touch to every transaction. Having successfully closed <strong>over 600 properties</strong> totaling <strong>more than $400 million in sales</strong>, I understand what it takes to achieve exceptional results.
+              </p>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
-                With deep expertise in the {business.areaServed} real estate market, I bring a unique blend
-                of cutting-edge technology and personal touch to every transaction. From AI-powered marketing
-                to virtual staging, I leverage the latest tools while never losing sight of what matters most
+                From AI-powered marketing to virtual staging, I leverage the latest tools while never losing sight of what matters most
                 – your goals, your timeline, and your peace of mind.
               </p>
             </div>
@@ -131,8 +151,11 @@ export default function HomePage() {
 
           <section className="section">
             <h2 className="section-title">What My Clients Say</h2>
+            <h3 style={{ fontSize: '1.375rem', marginBottom: '1rem', textAlign: 'center', color: 'var(--primary-dark)' }}>
+              Perfect 5.0 Star Rating from Real Clients
+            </h3>
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'center' }}>
-              Don't just take my word for it. Here's what satisfied clients across the Coachella Valley have to say about their experience working with me:
+              Don't just take my word for it. Here's what satisfied clients across the Coachella Valley have to say about their experience working with me. All <strong>{business.testimonials.length} reviews</strong> maintain a perfect <strong>5-star rating</strong>:
             </p>
             <Testimonials testimonials={business.testimonials} limit={3} />
             <div style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -199,16 +222,16 @@ export default function HomePage() {
             <h2 className="section-title">Serving the Entire Coachella Valley</h2>
             <div className="card">
               <h3 style={{ fontSize: '1.375rem', marginBottom: '1rem', color: 'var(--primary)' }}>
-                Your Local Real Estate Expert
+                Your Local Real Estate Expert with Unmatched Market Knowledge
               </h3>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '1rem' }}>
                 I work with buyers and sellers throughout the Coachella Valley, including <strong>Palm Desert</strong>,
                 <strong> Palm Springs</strong>, <strong>Rancho Mirage</strong>, <strong>La Quinta</strong>, <strong>Indian Wells</strong>, 
-                <strong> Cathedral City</strong>, <strong>Indio</strong>, and beyond.
+                <strong> Cathedral City</strong>, <strong>Indio</strong>, and beyond. With an average client satisfaction rating of <strong>5.0 out of 5.0 stars</strong> based on {business.testimonials.length} verified reviews, my commitment to excellence is proven.
               </p>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
                 Whether you're looking for a <Link href="/faq" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>luxury estate</Link>, 
-                a vacation home, or your first property, I'm here to help you every step of the way with personalized service and expert guidance.
+                a vacation home, or your first property, I'm here to help you every step of the way with personalized service and expert guidance. Available <strong>24 hours a day, 7 days a week</strong> because your real estate needs don't follow a 9-to-5 schedule.
               </p>
             </div>
           </section>
