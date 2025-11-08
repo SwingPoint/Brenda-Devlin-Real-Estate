@@ -3,8 +3,39 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://brendadevlin.com'),
-  title: 'Brenda Devlin Real Estate - Coachella Valley Expert',
-  description: 'Leading with heart, experience and integrity. Your trusted Coachella Valley real estate expert available 24/7.',
+  title: {
+    default: 'Brenda Devlin Real Estate - Coachella Valley Expert',
+    template: '%s | Brenda Devlin Real Estate'
+  },
+  description: 'Leading with heart, experience and integrity. Your trusted Coachella Valley real estate expert with 36 years of experience, 600+ properties sold, and $400M+ in closed sales. Available 24/7.',
+  keywords: ['Coachella Valley real estate', 'Palm Desert realtor', 'Brenda Devlin', 'luxury homes', 'real estate agent'],
+  authors: [{ name: 'Brenda Devlin' }],
+  creator: 'Brenda Devlin Real Estate',
+  publisher: 'Brenda Devlin Real Estate',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://brendadevlin.com',
+    siteName: 'Brenda Devlin Real Estate',
+    title: 'Brenda Devlin Real Estate - Coachella Valley Expert',
+    description: 'Your trusted Coachella Valley real estate expert with 36 years of experience. Available 24/7.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brenda Devlin Real Estate',
+    description: 'Your trusted Coachella Valley real estate expert',
+  },
 };
 
 export default function RootLayout({
@@ -14,9 +45,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body>{children}</body>
     </html>
   );
