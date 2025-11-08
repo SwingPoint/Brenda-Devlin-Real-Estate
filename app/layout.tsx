@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: 'Brenda Devlin Real Estate - Coachella Valley Expert',
     template: '%s | Brenda Devlin Real Estate'
   },
-  description: 'Leading with heart, experience and integrity. Your trusted Coachella Valley real estate expert with 36 years of experience, 600+ properties sold, and $400M+ in closed sales. Available 24/7.',
+  description: 'Trusted Coachella Valley real estate agent. 36 years experience, 600+ homes sold, $400M+ in sales. Available 24/7 for all your needs.',
   keywords: ['Coachella Valley real estate', 'Palm Desert realtor', 'Brenda Devlin', 'luxury homes', 'real estate agent'],
   authors: [{ name: 'Brenda Devlin' }],
   creator: 'Brenda Devlin Real Estate',

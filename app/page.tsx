@@ -9,7 +9,7 @@ const business = businessesData[0];
 
 export const metadata: Metadata = {
   title: `${business.name} - ${business.areaServed} Real Estate Expert`,
-  description: `${business.description} Serving the entire ${business.areaServed} with 36 years of experience, 600+ properties sold, and $400M+ in closed sales. Available 24/7 for all your real estate needs.`,
+  description: 'Coachella Valley real estate expert with 36 years experience, 600+ properties sold, $400M+ in sales. Available 24/7 for buyers and sellers.',
   keywords: [
     'Coachella Valley real estate',
     'Palm Desert realtor',
