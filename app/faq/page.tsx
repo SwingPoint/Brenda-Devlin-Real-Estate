@@ -7,7 +7,7 @@ const business = businessesData[0];
 
 export const metadata: Metadata = {
   title: `FAQ - ${business.name} | Common Real Estate Questions`,
-  description: `Frequently asked questions about working with ${business.name} in the ${business.areaServed}. Learn about timelines, marketing strategies, and technology.`,
+  description: `Frequently asked questions about working with ${business.name} in the ${business.areaServed}. Learn about property marketing, selling timelines, AI technology, and more from an agent with 36 years of experience.`,
   keywords: [
     'real estate FAQ',
     'Coachella Valley real estate questions',
@@ -115,13 +115,15 @@ export default function FAQPage() {
       </header>
 
       <main className="container">
-        <nav style={{ margin: '1rem 0' }}>
+        <nav aria-label="Breadcrumb" style={{ margin: '1rem 0' }}>
           <Link href="/" style={{ color: 'var(--primary)', textDecoration: 'none' }}>
-            ← Back to Home
+            Home
           </Link>
+          <span style={{ margin: '0 0.5rem', color: 'var(--text-light)' }}>→</span>
+          <span style={{ color: 'var(--text)' }}>FAQ</span>
         </nav>
 
-        <div className="faq-container">
+        <article className="faq-container">
           <section className="section">
             <div className="faq-item">
               <h2 className="faq-question">How do you market properties?</h2>
@@ -235,7 +237,7 @@ export default function FAQPage() {
               </Link>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <footer className="footer">

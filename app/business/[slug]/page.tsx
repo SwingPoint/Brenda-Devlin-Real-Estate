@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${business.name} - Contact & Location | ${business.areaServed}`,
-    description: `Contact ${business.name} at ${business.phone}. ${business.description}`,
+    description: `Contact ${business.name} at ${business.phone}. ${business.description} Serving Palm Desert, Palm Springs, and all of Coachella Valley with 36 years of experience and 600+ properties sold.`,
     keywords: [
       business.name,
       business.areaServed,
@@ -162,11 +162,15 @@ export default async function BusinessPage({ params }: PageProps) {
       </header>
 
       <main className="container">
-        <nav style={{ margin: '1rem 0' }}>
+        <nav aria-label="Breadcrumb" style={{ margin: '1rem 0' }}>
           <Link href="/" style={{ color: 'var(--primary)', textDecoration: 'none' }}>
-            ← Back to Home
+            Home
           </Link>
+          <span style={{ margin: '0 0.5rem', color: 'var(--text-light)' }}>→</span>
+          <span style={{ color: 'var(--text)' }}>Contact</span>
         </nav>
+
+        <article>
 
         <section className="section">
           <h2 className="section-title">Proven Excellence</h2>
@@ -339,6 +343,7 @@ export default async function BusinessPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+        </article>
       </main>
 
       <footer className="footer">
