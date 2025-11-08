@@ -163,22 +163,39 @@ export default async function BlogPostPage({ params }: PageProps) {
             }
 
             if (block.type === 'heading') {
-              const HeadingTag = `h${block.level}` as keyof JSX.IntrinsicElements;
-              return (
-                <HeadingTag 
-                  key={index} 
-                  style={{ 
-                    fontSize: block.level === 2 ? '1.75rem' : '1.375rem',
-                    fontWeight: 700,
-                    color: 'var(--primary-dark)',
-                    marginTop: '2.5rem',
-                    marginBottom: '1rem',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {block.text}
-                </HeadingTag>
-              );
+              if (block.level === 2) {
+                return (
+                  <h2
+                    key={index}
+                    style={{
+                      fontSize: '1.75rem',
+                      fontWeight: 700,
+                      color: 'var(--primary-dark)',
+                      marginTop: '2.5rem',
+                      marginBottom: '1rem',
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {block.text}
+                  </h2>
+                );
+              } else {
+                return (
+                  <h3
+                    key={index}
+                    style={{
+                      fontSize: '1.375rem',
+                      fontWeight: 700,
+                      color: 'var(--primary-dark)',
+                      marginTop: '2.5rem',
+                      marginBottom: '1rem',
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {block.text}
+                  </h3>
+                );
+              }
             }
 
             if (block.type === 'list') {
