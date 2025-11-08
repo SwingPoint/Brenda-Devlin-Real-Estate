@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${business.name} - ${business.areaServed} Real Estate`,
       description: business.tagline,
-      type: 'business.business',
+      type: 'website',
       locale: 'en_US',
     },
     alternates: {
