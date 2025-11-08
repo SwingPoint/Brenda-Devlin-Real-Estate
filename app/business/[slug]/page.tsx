@@ -6,9 +6,9 @@ import businessesData from '@/data/businesses.json';
 import type { Metadata } from 'next';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate static paths at build time
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each business page
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const business = businessesData.find((b) => b.slug === params.slug);
+  const { slug } = await params;
+  const business = businessesData.find((b) => b.slug === slug);
 
   if (!business) {
     return {
@@ -51,8 +52,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function BusinessPage({ params }: PageProps) {
-  const business = businessesData.find((b) => b.slug === params.slug);
+export default async function BusinessPage({ params }: PageProps) {
+  const { slug } = await params;
+  const business = businessesData.find((b) => b.slug === slug);
 
   if (!business) {
     notFound();
