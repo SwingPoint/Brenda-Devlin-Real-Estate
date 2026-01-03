@@ -9,7 +9,7 @@ const business = businessesData[0];
 
 export const metadata: Metadata = {
   title: `${business.name} - ${business.areaServed} Real Estate Expert`,
-  description: 'Coachella Valley real estate expert with 36 years experience, 600+ properties sold, $400M+ in sales. Available 24/7 for buyers and sellers.',
+  description: 'Coachella Valley real estate expert with 23 years experience, 600+ properties sold, $400M+ in sales. Available 24/7 for buyers and sellers.',
   keywords: [
     'Coachella Valley real estate',
     'Palm Desert realtor',
@@ -119,19 +119,19 @@ export default function HomePage() {
           <section className="section">
             <h2 className="section-title">Proven Track Record of Excellence</h2>
             <p style={{ fontSize: '1.0625rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 2rem' }}>
-              With over 600 properties sold and more than $400 million in closed transactions since 1988, I've built a reputation for delivering exceptional results across the Coachella Valley. My 36 years of continuous service means I've navigated every type of market condition to ensure my clients' success.
+              With over 600 properties sold and more than $400 million in closed transactions since 2001, I've built a reputation for delivering exceptional results across the Coachella Valley. My 23 years of continuous service means I've navigated every type of market condition to ensure my clients' success.
             </p>
             <Stats stats={business.stats} />
             
             <div className="card" style={{ marginTop: '3rem', background: 'var(--bg-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--primary)', textAlign: 'center' }}>
-                By The Numbers: Real Results Since 1988
+                By The Numbers: Real Results Since 2001
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                 <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.0625rem', lineHeight: '2' }}>
                   <li>✓ <strong>600+</strong> properties successfully sold</li>
                   <li>✓ <strong>$400+ million</strong> in total sales volume</li>
-                  <li>✓ <strong>36 years</strong> of continuous service</li>
+                  <li>✓ <strong>23 years</strong> of continuous service</li>
                   <li>✓ <strong>24/7/365</strong> availability</li>
                   <li>✓ <strong>5.0 stars</strong> average client rating</li>
                 </ul>
@@ -147,7 +147,7 @@ export default function HomePage() {
                   <li>✓ <strong>$5K - $15K</strong> saved on staging</li>
                   <li>✓ <strong>7 cities</strong> served in Coachella Valley</li>
                   <li>✓ <strong>100%</strong> personalized service</li>
-                  <li>✓ <strong>Since 1988</strong> serving the desert</li>
+                  <li>✓ <strong>Since 2001</strong> serving the desert</li>
                 </ul>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
                 Experience Meets Innovation in Coachella Valley
               </h3>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '1rem' }}>
-                Since 1988, I've built <strong>36 years of deep expertise</strong> in the {business.areaServed} real estate market. I bring a unique blend
+                Since 2001, I've built <strong>23 years of deep expertise</strong> in the {business.areaServed} real estate market. I bring a unique blend
                 of cutting-edge technology and personal touch to every transaction. Having successfully closed <strong>over 600 properties</strong> totaling <strong>more than $400 million in sales</strong>, I consistently achieve results that exceed expectations. In 2024 alone, I've helped over 50 families find their perfect home in the desert.
               </p>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>

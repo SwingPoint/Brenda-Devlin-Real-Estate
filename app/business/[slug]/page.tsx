@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${business.name} - Contact & Location | ${business.areaServed}`,
-    description: `Contact ${business.name} at ${business.phone}. Serving Palm Desert, Palm Springs & Coachella Valley with 36 years experience and 600+ homes sold.`,
+    description: `Contact ${business.name} at ${business.phone}. Serving Palm Desert, Palm Springs & Coachella Valley with 23 years experience and 600+ homes sold.`,
     keywords: [
       business.name,
       business.areaServed,

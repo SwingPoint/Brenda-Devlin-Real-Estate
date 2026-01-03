@@ -7,7 +7,7 @@ const business = businessesData[0];
 
 export const metadata: Metadata = {
   title: `FAQ - ${business.name} | Common Real Estate Questions`,
-  description: 'Real estate FAQ for Coachella Valley buyers and sellers. Learn about marketing, timelines, technology & more from a 36-year veteran agent.',
+  description: 'Real estate FAQ for Coachella Valley buyers and sellers. Learn about marketing, timelines, technology & more from a 23-year veteran agent.',
   keywords: [
     'real estate FAQ',
     'Coachella Valley real estate questions',

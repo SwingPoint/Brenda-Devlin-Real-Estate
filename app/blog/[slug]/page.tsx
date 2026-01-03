@@ -218,7 +218,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               Ready to Take the Next Step?
             </h2>
             <p style={{ fontSize: '1.0625rem', marginBottom: '1.5rem', lineHeight: '1.7' }}>
-              Whether you're buying or selling in the Coachella Valley, I'm here to help you achieve your real estate goals with 36 years of local expertise.
+              Whether you're buying or selling in the Coachella Valley, I'm here to help you achieve your real estate goals with 23 years of local expertise.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/business/brenda-devlin-real-estate" className="btn">

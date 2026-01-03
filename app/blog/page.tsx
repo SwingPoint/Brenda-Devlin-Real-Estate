@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Real Estate Blog - Coachella Valley Market Insights',
-  description: 'Expert real estate advice, market reports, and home buying guides for Palm Desert, Palm Springs, and Coachella Valley from 36-year veteran agent Brenda Devlin.',
+  description: 'Expert real estate advice, market reports, and home buying guides for Palm Desert, Palm Springs, and Coachella Valley from 23-year veteran agent Brenda Devlin.',
   keywords: ['Coachella Valley real estate blog', 'Palm Desert market report', 'home buying guide', 'real estate tips'],
   openGraph: {
     title: 'Real Estate Blog - Coachella Valley Market Insights',
@@ -89,7 +89,7 @@ export default function BlogPage() {
         <article>
           <section className="section">
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '3rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 3rem' }}>
-              Welcome to the Brenda Devlin Real Estate Blog. Here you'll find in-depth market analysis, home buying and selling guides, and insider tips from 36 years of experience in the Coachella Valley real estate market.
+              Welcome to the Brenda Devlin Real Estate Blog. Here you'll find in-depth market analysis, home buying and selling guides, and insider tips from 23 years of experience in the Coachella Valley real estate market.
             </p>
 
             <div style={{ display: 'grid', gap: '2rem' }}>

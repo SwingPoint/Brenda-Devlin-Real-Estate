@@ -109,7 +109,7 @@ From brendadevlin.com:
 ### Stats & Authority Signals
 - **600+** properties bought and sold
 - **$400M+** in closed transactions
-- **36 years** of desert experience
+- **23 years** of desert experience
 - **24/7** availability
 
 ## 🔍 SEO & AIO Features
